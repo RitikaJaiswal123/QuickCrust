@@ -1,51 +1,63 @@
 let cartItems = [];
 
 function updateCartDisplay() {
+    localStorage.setItem('cartItems', JSON.stringify(cartItems));
     const cartModalBody = document.querySelector('.modal-body');
     const lblCount = document.getElementById('lblCount');
 
-    cartModalBody.innerHTML = ''; // Clear previous items
+   if(cartModalBody) cartModalBody.innerHTML = '';
 
-    cartItems.forEach((item) => {
+    cartItems.forEach((item, index) => {
         const itemDiv = document.createElement('div');
         itemDiv.classList.add('mb-3');
-        itemDiv.innerHTML = `
-            <p><strong>${item.name}</strong> - ₹${item.price}</p>
-        `;
+        itemDiv.innerHTML = `<p><strong>${item.name}</strong> - ₹${item.price.toFixed(2)}   <span><button class="btn btn-close float-end" onclick="removeItem(${index})"></button></span>`;
         cartModalBody.appendChild(itemDiv);
     });
 
     lblCount.innerText = cartItems.length;
 }
-
-function ShowCart() {
+function removeItem(index) {
+    cartItems.splice(index, 1);
     updateCartDisplay();
-}
+  }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const cartButtons = document.querySelectorAll('.CartBtn');
+
+    const savedCart = localStorage.getItem('cartItems');
+    if (savedCart) {
+        cartItems = JSON.parse(savedCart);
+        updateCartDisplay();
+    }
+
+    const cartButtons = document.querySelectorAll(".CartBtn");
 
     cartButtons.forEach(button => {
         button.addEventListener('click', () => {
-            const card = button.closest('.box');
+            const card = button.closest('.border');
             if (!card) {
-                console.warn('Could not find .box ancestor for CartBtn');
+                console.log('Could not find .border container for button');
                 return;
             }
 
             const nameEl = card.querySelector('.fw-bold');
             const priceEl = card.querySelector('.price-inr');
 
-            if (!nameEl || !priceEl) {
-                console.warn('Missing .fw-bold or .price-inr in card');
+            const name = nameEl.innerText.trim();
+            const price = parseFloat(priceEl.innerText.replace(/[₹,]/g, '').trim());
+
+            if (isNaN(price)) {
+                console.warn('Price could not be parsed:', priceEl.innerText);
                 return;
             }
-
-            const name = nameEl.innerText;
-            const price = parseInt(priceEl.innerText.replace('₹', ''));
 
             cartItems.push({ name, price });
             updateCartDisplay();
         });
     });
 });
+
+
+
+
+
+
