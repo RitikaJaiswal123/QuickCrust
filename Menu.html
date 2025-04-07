@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <link rel="stylesheet" href="./src/styles/index.css">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-warning px-4 ">
+            <div class="container-fluid">
+                <a class="navbar-brand fs-3 fw-bold" href="#Home">QUICKCRUST</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto fs-5">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="./index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="#">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="./Login.html">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" href="./Register.html">Register</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <span> <button onclick="ShowCart()" class="bi bi-cart4 btn btn-warning position-relative" data-bs-target="#cart" data-bs-toggle="modal">
+                <span class="badge bg-danger rounded rounded-circle position-absolute" id="lblCount"></span>
+            </button></span>
+        </nav>
+    </header>
+    <section class="Vegpizza container text-white">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <h3 class="text-danger text-start fw-bold mt-5">Vegpizza</h3>
+                <img src="./public/images/f1.png" alt="Vegpizza" width="300" height="300">
+            </div>
+            <div class="col-md-9 mb-9 mt-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 gy-lg-0 gy-5 g-lg-5 ms-5">
+                    <div class="col">
+                        <img src="./public/images/p1.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹246</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p2.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹246</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p3.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹246</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p4.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹246</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="NonVegpizza container  text-white">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <h3 class="text-danger text-start fw-bold mt-5">NonVegpizza</h3>
+                <img src="./public/images/pizza.png" alt="Vegpizza" width="300" height="300">
+            </div>
+            <div class="col-md-9 mb-9 mt-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 gy-lg-0 gy-5 g-lg-5 ms-5">
+                    <div class="col">
+                        <img src="./public/images/p1.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Barbecue Chicken
+                                </p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹346</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p2.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Barbecue Chicken
+                                </p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹346</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p3.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Barbecue Chicken
+                                </p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹346</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="./public/images/p4.jpg" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Barbecue Chicken
+                                </p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹346</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="ColdDrink container  text-white">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <h3 class="text-danger text-start fw-bold mt-5">Cold-Drink</h3>
+                <img src="https://img.freepik.com/free-photo/serving-cola-from-bottle-glass-full-ice_463209-157.jpg?t=st=1743847252~exp=1743850852~hmac=2e1b232f87cda5561568c626e2b2a33f9e614aebe6ea9d8827a24c812de24b02&w=1380" alt="Cold Drink" width="300" height="300">
+            </div>
+            <div class="col-md-9 mb-9 mt-5">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 gy-lg-0 gy-5 g-lg-5 ms-5">
+                    <div class="col">
+                        <img src="https://img.freepik.com/free-photo/soft-drink-beverage-with-ice-cubes_116380-115.jpg?t=st=1743842738~exp=1743846338~hmac=c64375410ec0f2362e4cc134a4337bbf8803beda5331c09957ffa64f8e653253&w=740" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹66</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.freepik.com/free-photo/glass-kiwifruit-orange-cocktail-garnished-with-orange-kiwifruit-slice_140725-6941.jpg?t=st=1743842684~exp=1743846284~hmac=4564560886c653b1641f1ea955ae685c446210211e4149b24a6af651afb925ab&w=740" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹86</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.freepik.com/free-photo/exotic-cocktail-with-lemons_181624-2762.jpg?t=st=1743842630~exp=1743846230~hmac=751a1da32aef6d4aa932f2999d9c4b440f277ea2085db242494af1bcdc341689&w=740" class="card-img " height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹46</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <img src="https://img.freepik.com/free-photo/exotic-cocktail-with-lime_181624-702.jpg?t=st=1743842561~exp=1743846161~hmac=3acd7192ef6d342a492cce8f8d4dbf5373a906f35ee41905e9461ff1e80d4ec9&w=740" class="card-img" height="200">
+                        <div class="border border-dark border-2">
+                            <div class="card-body ">
+                                <p class="fw-bold">Margherita</p>
+                                <p>Classic delight with 100% real mozzarella cheese</p>
+                            </div>
+                            <div class="card-footer">
+                                <div class="row">
+                                    <div class="col">
+                                        <p class="fw-bold mt-2">price <span class="price-inr">₹67</span></p>
+                                    </div>
+                                    <div class="col">
+                                        <button class="bi bi-cart-fill btn btn-dark CartBtn">Cart</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="Sidedishes container"></section>
+    <section class="Desserts container"></section>
+
+
+    <div class="modal fade" id="cart">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-body">
+
+              </div>
+          </div>
+         </div>
+      </div>
+
+
+    <div class=" footer bg-black w-100 ">
+        <div class="container-fluid py-4">
+            <div class="px-3 py-4 bg-warning contact-box row">
+                <div class="col-md-4 mb-3">
+                    <h4>Address</h4>
+                    <h6 class="bi bi-geo-alt-fill"> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </h6>
+                </div>
+                <div class="col-md-4 mb-3 ">
+                    <h4>Email</h4>
+                    <h6 class="bi bi-envelope-fill"> Quickcrust@gmail.com</h6>
+
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h4>Call</h4>
+                    <h6 class="bi bi-telephone-fill"> : 9873462710 / 8723897491</h6>
+                </div>
+
+            </div>
+
+            <div class="text-white row ms-5 ">
+                <div class="col-md-4 mb-4">
+                    <h3 style="color:rgb(227, 202, 80)">Quickcrust</h3>
+                    <p>
+                        Fresh, delicious meals made with love.<br>
+                        Follow us on social media for<br> updates and offers.
+                    </p>
+                    <h5><span class="bi bi-facebook m-2"> </span> <span class="bi bi-instagram m-2"> </span>
+                        <span class="bi bi-twitter m-2"> </span> <span class="bi bi-youtube m-2"></span>
+                    </h5>
+
+                </div>
+                <div class="col-md-4 mb-4 ">
+                    <h3 style="color: rgb(227, 202, 80);">Quick Links</h3>
+                    <ul class="text-white list-unstyled">
+                        <li><a href="./index.html" class="text-dark text-decoration-none fw-bold text-white">HOME</a>
+                        </li>
+                        <li><a href="#" class="text-dark text-decoration-none fw-bold text-white">MENU</a>
+                        </li>
+                        <li><a href="./Login.html" class="text-dark text-decoration-none fw-bold text-white">LOGIN</a>
+                        </li>
+                        <li><a href="./Register.html" class="text-dark text-decoration-none fw-bold text-white">REGISTER</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h3 style="color: rgb(227, 202, 80)">Contact</h3>
+                    <b> Monday – Friday </b>: 8am – 4pm<br>
+                    <b>Saturday </b>: 8am – 12am<br>
+                    <b class="bi bi-telephone-fill"> - 9876543210 / 8765432190</b>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./src/scripts/cart.js"></script>
+
+</body>
+
+</html>
